@@ -24,11 +24,11 @@ eureka:
   instance:
     prefer-ip-address: true  
 
-server:
-  port: ${PORT:8083}
-
 gemini:
   api:
     key: ${GEMINI_API_KEY}
     base-url: ${GEMINI_API_BASE_URL} # Nueva propiedad para la URL base
     generate-content-endpoint: ${GEMINI_GENERATE_CONTENT_ENDPOINT} # Nueva propiedad para el endpoint
+
+server:
+  port: ${PORT:8083}

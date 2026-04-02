@@ -1,7 +1,7 @@
 spring:
   security:
     oauth2:
-      resocurceserver:
+      resourceserver:
         jwt:
           jwk-set-uri: http://localhost:8181/realms/fitness-oauth2/protocol/openid-connect/certs
   cloud:

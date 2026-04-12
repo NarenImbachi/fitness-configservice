@@ -7,7 +7,7 @@ spring:
 
   jpa:
     hibernate:
-      ddl-auto: ${DB_HIBERNATE_DDL_AUTO:create-drop}
+      ddl-auto: ${DB_HIBERNATE_DDL_AUTO:update}
     properties:
       hibernate:
         dialect: ${DB_HIBERNATE_DIALECT:org.hibernate.dialect.PostgreSQLDialect}
@@ -17,7 +17,15 @@ eureka:
     serviceUrl:
       defaultZone: ${EUREKA_SERVER_URL:http://localhost:8761/eureka/}
   instance:
-    prefer-ip-address: true  
+    prefer-ip-address: true
+
+# Configuración para el Cliente de Administración de Keycloak
+keycloak:
+  admin:
+    server-url: http://localhost:8181
+    realm: fitness-oauth2
+    client-id: userservice-admin-client
+    client-secret: WhpBwlozdFqLP087B9gh888r6a65szU7
 
 server:
   port: ${PORT:8081}
